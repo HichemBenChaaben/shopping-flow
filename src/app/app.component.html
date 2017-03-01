@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+    <h1>
+      {{title}}
+    </h1>
+    <button class="btn btn-success btn-lg">Hello</button>
+    <div *ngFor="let item of products">
+      <div class="product">name: {{item.name}}</div>
+    </div>
+</div>
