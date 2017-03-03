@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="product__">
+      <div class="product__title">
+        <h2 *ngIf="_produt && _product.name">
+          {{name}}
+        </h2>
+      </div>
+      <div class="product__descriptiom">
+        <h3>Product description</h3>
+        <p *ngIf="_product && _product.description">
+          {{_product.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div class="p-details">
+      <app-product-summary [productName]="_product.name" [productPrice]="_product.price" [productImage]="_product.picture"></app-product-summary>
+      <div class="p-details__cta">
+        <a routerLink="/checkout/{{_product._id}}" class="btn btn-success btn-md">Proceed to checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
