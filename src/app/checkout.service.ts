@@ -8,6 +8,7 @@ export class CheckoutService {
 
   // positng purshase data to the backened and returning the restult..
   post(data: any) {
+    console.log('data from the servce....', data);
     let response = {
         product: data.product.name,
         user: data.user.name

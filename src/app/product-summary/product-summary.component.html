@@ -1,6 +1,6 @@
 <div class="product-summary">
   <div clas="product-summary__image">
-    <img [src]="productImage" />
+    <app-lazyimg [pictureUrl]="productImage"></app-lazyimg>
   </div>
   <h3>{{productName}}</h3>
   <p class="product-summary__price">{{productPrice | currency:'EUR':true}}</p>

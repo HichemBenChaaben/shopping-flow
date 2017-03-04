@@ -17,6 +17,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { TruncatePipe } from './truncate.pipe';
 import { ProductSummaryComponent } from './product-summary/product-summary.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { HeaderComponent } from './header/header.component';
+import { LazyimgComponent } from './lazyimg/lazyimg.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     CheckoutComponent,
     TruncatePipe,
     ProductSummaryComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HeaderComponent,
+    LazyimgComponent
   ],
   imports: [
     FormsModule,

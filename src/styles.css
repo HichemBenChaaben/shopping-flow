@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.app-loading {
+    opacity: 1;
+    background: url('./assets/spinner.gif') no-repeat center center;
+    height: 120px;
+    width: 200px;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.app-loading p {
+    color: #333;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    font-size: 22px;
+    transform: translate(-50%, 50%);
+}

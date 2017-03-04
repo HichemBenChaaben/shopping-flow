@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
 
 // pipes
-import {TruncatePipe} from '../truncate.pipe';
+import { TruncatePipe } from '../truncate.pipe';
 
 @Component({
   selector: 'app-listing',
@@ -26,21 +26,19 @@ export class ListingComponent implements OnInit {
     this.isLoaded = [];
     this._sub = this.products.get().subscribe(res => {
       this.catalog = res;
-      console.log('___ this catalog _____ ', this.catalog);
     }, err => {
       console.log('error with the component');
-    }, () => {
-      console.log('operation complete');
     });
   }
-  
-  dosomething(event, ref, index) {
-    // console.log('____something... function...', event.target, '___index___', index);
+
+
+  displayImage(ref, index) {
     ref.style.display = 'none';
     this.isLoaded[index] = true;
   }
 
   ngOnDestory() {
+    // this will stop receiving values from the observable
     this._sub.unsubscribe();
   }
 }

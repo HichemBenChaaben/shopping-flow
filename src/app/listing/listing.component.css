@@ -23,63 +23,24 @@
 }
 .card__thumb {
     margin: 10px auto;
-    height: 180px;/* the height here is variant according to breakpoint */
+    height: 180px;
     max-width:100%;
     max-height:100%;
-    -webkit-filter: blur(0);
-    filter: blur(0);
     position: relative;
     overflow: hidden;
 }
 .card__thumb img {
     max-width:100%;
     max-height:100%;
-    transition: all .3s cubic-bezier(0.17,0.67,0.83,0.67) 0s
 }
-.card__thumb img:hover {
-    transform: scale(1.1,1.1);
-}
-.card__thumb img.preload {
-    width: 320px;
-    -webkit-filter: grayscale(0.9) blur(10px);
-        filter: grayscale(0.9) blur(10px);
-}
-
 .card__price {
     font-weight: 800;
     font-size: 16px;
     margin: 10px auto;
     text-align: center;
 }
-
 .card__cta {
     border-radius: 4px;
     border: none;
     display: block;
-}
-
-@keyframes placeHolderShimmer{
-    0%{
-        background-position: -468px 0
-    }
-    100%{
-        background-position: 468px 0
-    }
-}
-
-.animated-background {
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
-    animation-timing-function: linear;
-    background: #f6f7f8;
-    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-    background-size: 800px 104px;
-    width: 100%;
-    height: 180px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }

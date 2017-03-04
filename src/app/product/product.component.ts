@@ -9,7 +9,8 @@ import { IProduct } from './product';
   styleUrls: ['./product.component.css'],
   providers: [ProductsService]
 })
-export class ProductComponent implements OnInit {
+
+export class ProductComponent {
   route;
   sub;
   products: any;
@@ -21,10 +22,6 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._product = {};
-    /// or you can do
-    /// let id = this.route.snapshot['id]
-    console.log('the id of this thing is....', this.route.snapshot['id']);
     this.sub = this.route.params.subscribe(params => {
       let id = params.id;
       this.details = this.products.get();
@@ -38,5 +35,5 @@ export class ProductComponent implements OnInit {
     this.route.params.unsubscribe();
     this.sub.unsubscribe();
   }
-
+  
 }

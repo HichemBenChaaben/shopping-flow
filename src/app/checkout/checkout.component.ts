@@ -23,7 +23,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.activatedRoute.params.subscribe(params => {
       let { id } = params;
       this.getProduct(id);
@@ -37,15 +36,12 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
-  doCheckout(event) {
+  doCheckout(event, form) {
+    if (!form.valid) return;
     let purshase = {
-      user: {},
-      product: {}
+      user: this.model,
+      product: this._product
     };
-    Object.assign(purshase.user, this.model);
-    Object.assign(purshase.product, this._product);
-
-    // send this to a service
     this.checkout.post(purshase).subscribe(res => {
       if (res) {
         this.router.navigate(['/confirmation', { product: res.product, user: res.user }]);
