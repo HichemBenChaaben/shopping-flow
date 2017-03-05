@@ -29,7 +29,6 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
-  // get one product at a time from the service
   getProduct(id) {
     this.products.getProduct(id).subscribe(res => {
       this._product = res;

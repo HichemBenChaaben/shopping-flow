@@ -6,7 +6,6 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
-// import {PageNotFoundComponent} from ''
 const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'checkout/:id', component: CheckoutComponent },

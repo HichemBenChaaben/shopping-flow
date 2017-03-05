@@ -1,17 +1,11 @@
 <div class="row">
-  <div class="col-sm-12 col-md-8">
+  <div class="col-sm-12 col-md-8 summary-form">
     <h4>Personal details</h4>
     <form (ngSubmit)="doCheckout($event, userForm)" #userForm="ngForm" novalidate>
       <div class="form-group">
-        <input type="text"
-               required
-               id="name"
-               #name="ngModel"
-               name="name"
-               [(ngModel)]="model.name" 
-               class="form-control"
-               placeholder="Name"/>
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        <input type="text" required id="name" #name="ngModel" name="name" [(ngModel)]="model.name" class="form-control" placeholder="Name"
+        />
+        <div [hidden]="name.valid || name.pristine" class="text-danger">
           * Name is required
         </div>
       </div>
