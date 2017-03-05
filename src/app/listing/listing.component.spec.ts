@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ListingComponent } from './listing.component';
+import { TruncatePipe } from '../truncate.pipe';
 
 describe('ListingComponent', () => {
   let component: ListingComponent;
@@ -8,7 +9,8 @@ describe('ListingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListingComponent ]
+      declarations: [ ListingComponent, TruncatePipe ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

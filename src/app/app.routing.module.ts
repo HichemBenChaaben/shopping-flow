@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { ListingComponent } from './listing/listing.component';
 import { ProductComponent } from './product/product.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
