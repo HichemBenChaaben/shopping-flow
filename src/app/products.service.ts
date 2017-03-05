@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import {IProduct} from './product/product';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import {IProduct} from './product/product';
 
 @Injectable()
 export class ProductsService {
@@ -18,7 +18,6 @@ export class ProductsService {
       .catch(this.handleError);
   }
 
-  // getting 1 product
   getProduct(id: string):Observable <IProduct> {
     return this.http.get(this._productUrl)
       .map(res => res.json())
